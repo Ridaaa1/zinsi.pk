@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zinsi Clay Jewelry</title>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'dynapuff', sans-serif;
+      background-color: #fff9f4;
+      color: #333;
+    }
+    header {
+      background-color: #936C6C;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'dynapuff', serif;
+      position: relative;
+    }
+	   .logo-container img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8a5d4d;
+}
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #F4F0F0;
+    }
+    header p {
+	color: #F4F0F0;
+      margin: 0.5rem 0 1rem;
+    }
+    .stickers {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .stickers img {
+      height: 40px;
+      margin-left: 10px;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #8a5d4d;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .product {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 300px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .product h2 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+    .product p {
+      font-size: 1rem;
+      color: #777;
+    }
+    .product button {
+      background-color: #8a5d4d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .cart {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 250px;
+      z-index: 1000;
+    }
+    .cart h3 {
+      margin-top: 0;
+    }
+    .cart-items {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+    }
+    .cart button {
+      background: #4A312B;
+      color: white;
+      width: 100%;
+    }
+    .form-section {
+      padding: 2rem;
+      background: #f0e9e3;
+      text-align: center;
+    }
+    .form-section form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-section input, .form-section textarea {
+      padding: 0.7rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .form-section button {
+      background-color: #8a5d4d;
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .insta-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .insta-link a {
+      color: #8a5d4d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  
+  <d <!-- Logo Container -->
+<div class="logo-container">
+  <img src="zensi.jpg" alt="zinsi" class="logo" />
+</div>
+    <h1>Zinsi.pk</h1>
+    <p>Jesa Mood,wesi Bling! </P>
+<p> ⟡Clay and beaded accessories 
+⟡Customization available</p>
+  </header>
+
+  <div class="cart" id="cart">
+    <h3>Your Cart</h3>
+    <div class="cart-items" id="cart-items"></div>
+    <button onclick="checkout()">Checkout on WhatsApp</button>
+  </div>
+
+  <div class="section">
+    <h2>Earrings</h2>
+    <div class="container">
+      <div class="product">
+        <img src="floraldrop.jpg">
+        <h2>Floral Drop Earrings</h2>
+        <p>PKR 299</p>
+        <button onclick="addToCart('Floral Drop Earrings',299)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="stud.jpg" alt="Clay Earrings">
+        <h2>Floral Drop Earrings</h2>
+        <p>PKR 299</p>
+        <button onclick="addToCart('Floral Drop Earrings',299)">Add to Cart</button>
+      </div>
+	   <div class="product">
+        <img src="blue.jpg" alt="Clay Earrings">
+        <h2>Flower Stud Earrings</h2>
+        <p>PKR 299</p>
+        <button onclick="addToCart('Flower Stud Earrings',299)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pinkearrings.jpg" alt="Clay Earrings">
+        <h2>Pink Floral Earrings</h2>
+        <p>PKR 399</p>
+        <button onclick="addToCart('Pearl Buds Earrings', 399)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Charms + Keychains</h2>
+    <div class="container">
+      <div class="product">
+        <img src="batman.jpg" alt="Keychain">
+        <h2>Clay Batman Charm</h2>
+        <p>PKR 349</p>
+        <button onclick="addToCart('Clay Batman Charm', 349)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="bunnycharm.jpg" alt="Keychain">
+        <h2>Bunny Bow Charm</h2>
+        <p>PKR 299</p>
+        <button onclick="addToCart('Bunny Bow Charm', 299)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Beaded Bracelets</h2>
+    <div class="container">
+      <div class="product">
+        <img src="bracelet.jpg" alt="Bracelet">
+        <h2>Bead & Braid Bracelet Set</h2>
+        <p>PKR 349</p>
+        <button onclick="addToCart('Bead & Braid Bracelet Set', 349)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="insta-link">
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/zinsi.pk" target="_blank">@zinsi.pk</a></p>
+  </div>
+
+  <script>
+    const cartItems = [];
+
+    function addToCart(name, price) {
+      cartItems.push({ name, price });
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartContainer = document.getElementById('cart-items');
+      cartContainer.innerHTML = '';
+      cartItems.forEach(item => {
+        const div = document.createElement('div');
+        div.textContent = `${item.name} - PKR ${item.price}`;
+        cartContainer.appendChild(div);
+      });
+    }
+
+    function checkout() {
+      const message = cartItems.map(item => `${item.name} - PKR ${item.price}`).join('%0A');
+      const whatsappUrl = `https://wa.me/923340032366?text=I%20want%20to%20order:%0A${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
